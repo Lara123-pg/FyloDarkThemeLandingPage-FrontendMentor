@@ -1,0 +1,15 @@
+@mixin Display($justifyContent: '', $flexDirection: '', $alignItems: '') {
+    display: flex;
+
+    @if $justifyContent != '' {
+        justify-content: $justifyContent;
+    }
+
+    @if $flexDirection != '' {
+        flex-direction: $flexDirection;
+    }
+
+    @if $alignItems != '' {
+        align-items: $alignItems;
+    }
+}

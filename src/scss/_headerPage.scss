@@ -1,0 +1,79 @@
+header {
+    padding: 2em;
+
+    z-index: 1;
+
+    div.menu {
+        @include Display(space-between, row);
+
+        padding: 2em 2em 0 2em;
+
+        img.logo {
+            @include styleWH(15%, 15%);
+
+            padding: 1.5em;
+        }
+
+        nav.menu {
+            ul {
+                @include Display(flex-end, row);
+                @include styleFont(0.9rem, 400);
+
+                list-style: none;
+
+                li {
+                    padding: 2em;
+
+                    a {
+                        color: $color1;
+
+                        text-decoration: none;
+
+                        &:hover {
+                            font-weight: 700;
+
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    div.contentIntro {
+        @include Display('', column, center);
+
+        margin-top: 4em;
+
+        img {
+           z-index: 1;
+        }
+
+        h1 {
+            @include styleFont(2rem, 700);
+            width: 50%;
+
+            text-align: center;
+
+            color: $color1;
+
+            margin-top: 1em;
+            margin-bottom: 1em;
+
+            z-index: 1;
+        }
+
+        p {
+            @include styleFont(1rem, 400);
+            width: 40%;
+
+            text-align: center;
+
+            color: $color1;
+
+            margin-bottom: 1.2em;
+
+            z-index: 1;
+        }
+    }
+}

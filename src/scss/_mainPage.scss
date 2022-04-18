@@ -1,0 +1,306 @@
+main {
+    background-color: $backgroundMain;
+
+    img {
+        width: 100%;
+
+        margin-top: -17em;
+
+        z-index: -1;
+    }
+
+    div.infos {
+        display: grid;
+        grid-template-areas: 'a1 a2'
+                            'a3 a4';
+
+        justify-content: center;
+
+        padding-top: 6em;
+        
+        div {
+            @include Display(center, column , center);
+            @include styleWH(420px, 300px);
+
+            font-family: 'Raleway', sans-serif;
+
+            padding: 3em;
+            padding-bottom: 8em;
+
+            img {
+                @include styleWH(100px, 100px);
+
+                z-index: 1;
+            }
+
+            h2 {
+                @include styleFont(1.2rem, 700, '');
+                color: $color1;
+
+                padding: 1em 0 0.8em 0;
+            }
+
+            p {
+                color: $color1;
+
+                font-weight: 400;
+
+                text-align: center;
+            }
+        }
+
+        div.info1 {
+            grid-area: a1;
+
+            p {
+                width: 320px;
+            }
+        }
+
+        div.info2 {
+            grid-area: a2;
+
+            p {
+                width: 360px;
+            }
+        }
+
+        div.info3 {
+            grid-area: a3;
+
+            p {
+                width: 350px;
+            }
+        }
+
+        div.info4 {
+            grid-area: a4;
+
+            p {
+                width: 350px;
+            }
+        }
+    }
+
+    div.containerInfo {
+        @include Display(space-around, '' , center);
+
+        font-family: 'Raleway', sans-serif;
+
+        margin: 8em 0 9em 0;
+
+        padding: 2em;
+
+        img {
+            @include styleWH(550px, 550px);
+
+            z-index: 1;
+        }
+
+        div.texts {
+            margin-top: -10em;
+
+            h2 {
+                @include styleFont(2.3rem, 700, '');
+                width: 450px;
+
+                color: $color1;
+            }
+
+            p {
+                width: 580px;
+
+                color: $color1;
+
+                font-weight: 400;
+
+                font-size: 1rem;
+
+                padding: 1em;
+
+                margin-left: -1em;
+            }
+
+            a {
+                color: $color2;
+
+                font-size: 1.2rem;
+                font-weight: 400;
+
+                text-decoration: none;
+
+                border-bottom: 1px solid $color2;
+
+                padding-bottom: 0.3em;
+
+                img {
+                    @include styleWH(20px, 20px);
+                }
+
+                &:hover {
+                    color: $color1;
+
+                    border-color: $color1;
+
+                    img {
+                        @include styleWH(15px, 15px);
+
+                        background-color: $color1;
+
+                        border-radius: 80px;
+                    }
+                }
+            }
+        }
+    }
+
+    img.quotes {
+        @include styleWH(60px, 60px);
+
+        z-index: 1;
+
+        position: absolute;
+
+        margin: -1em 0 0 4.5em;
+    }
+
+    div.posts {
+        @include Display(space-around);
+
+        position: relative;
+        margin-top: 2em;
+
+        padding: 2em;
+
+        z-index: 1;
+
+        padding-bottom: 30em;
+
+        div.post1, div.post2, div.post3  {
+            @include styleWH(320px, 180px);
+
+            background-color: $backgroundCard;
+
+            padding: 1.5em;
+
+            box-shadow: 0 0 3em $backgroundCard;
+
+            p {
+                color: $color1;
+
+                font-weight: 400;
+
+                padding-top: 1em;
+            }
+
+            div.profile {
+                @include Display(space-around);
+
+                width: 150px;
+
+                img {
+                    @include styleWH(30px, 30px);
+
+                    border-radius: 30px;
+
+                    z-index: 1;
+
+                    margin-top: 1em;
+                }
+
+                div.names {
+                    margin-bottom: 1em;
+
+                    p.nameP {
+                        font-weight: 700;
+                    }
+
+                    p.profession {
+                        font-size: 0.6rem;
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+    }
+
+    div.containerInput {
+        @include Display(center);
+
+        padding-top: 15em;
+
+        position: absolute;
+        bottom: -182em;
+        left: 15em;
+
+        width: 800px;
+
+        z-index: 1;
+    }
+
+    div.textInput {
+        @include Display('', column, center);
+
+        width: 100%;
+
+        background-color: $backgroundMenu;
+
+        padding: 2em;
+
+        box-shadow: 0 0 1em #000;
+
+        strong {
+            font-size: 2rem;
+
+            color: $color1;
+
+            font-weight: 700;
+
+            padding-bottom: 0.7em;
+        }
+
+        p {
+            @include styleFont('', 400);
+            color: $color1;
+
+            width: 550px;
+
+            text-align: center;
+
+            padding-bottom: 2em;
+        }
+
+        div.input {
+            div.inputButton {
+                @include Display(space-around);
+
+                width: 600px;
+                
+                input {
+                    @include styleWH(390px, 45px);
+        
+                    border-radius: 30px;
+
+                    padding: 1em;
+                }
+
+                button {
+                    width: 31%;
+                }
+            }
+
+            p.error {
+                @include styleFont(0.7rem, 700, '');
+                display: flex;
+
+                margin-left: 4em;
+
+                color: $color4;
+
+                padding-top: 1em;
+            }
+            
+        }
+    }  
+
+}

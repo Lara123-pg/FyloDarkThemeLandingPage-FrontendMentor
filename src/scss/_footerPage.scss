@@ -1,0 +1,182 @@
+footer {
+    div.containerFooter {
+        @include Display(space-around, '',flex-end );
+
+        background-color: $backgroundFooter;
+
+        padding-bottom: 15em;
+
+        height: 550px;
+
+        position: relative;
+
+        div.logoLocation {
+            @include Display('', column, flex-start);
+
+            width: 400px;
+
+            img {
+                @include styleWH(150px, 100px);
+
+                padding-bottom: 3em;
+            }
+
+            div.text2 {
+                display: flex;
+
+                img {
+                    @include styleWH(20px, 70px);
+                }
+
+                p {
+                    color: $color1;
+
+                    width: 300px;
+
+                    text-align: center;
+                }
+            }
+        }
+
+        div.phoneEmail {
+            @include Display('', column, center);
+
+            div.phone {
+                display: flex;
+                padding: 1em;
+
+                img {
+                    padding: 0.4em;
+                }
+
+                p {
+                    color: $color1;
+
+                    padding: 0.4em;
+
+                    font-weight: 400;
+                }
+            }
+
+            div.email {
+                display: flex;
+
+                img {
+                    padding: 0.4em;
+                }
+
+                p {
+                    color: $color1;
+
+                    padding: 0.4em;
+
+                    font-weight: 400;
+                }
+            }
+        }
+
+        div.links {
+            nav {
+                ul {
+                    display: grid;
+                    grid-template-areas: 'a1 a5'
+                                        'a2 a6'
+                                        'a3 a7'
+                                        'a4 a8';
+                    list-style: none;
+
+                    width: 200px;
+            
+                    row-gap: 1em;
+
+                    li a {
+                        color: $color1;
+
+                        text-decoration: none;
+
+                        font-weight: 400;
+
+                        &:hover {
+                            font-weight: 700;
+                        }
+                    }
+
+                    li#link1 {
+                        grid-area: a1;
+                    }
+
+                    li#link2 {
+                        grid-area: a2;
+                    }
+
+                    li#link3 {
+                        grid-area: a3;
+                    }
+
+                    li#link4 {
+                        grid-area: a4;
+                    }
+
+                    li#link5 {
+                        grid-area: a5;
+                    }
+
+                    li#link6 {
+                        grid-area: a6;
+                    }
+
+                    li#link7 {
+                        grid-area: a7;
+                    }
+                }
+            }
+        }
+        
+        div.socialMedias {
+            @include Display(space-around);
+
+            width: 155px;
+
+            img.facebookInstagram {
+                @include styleWH(52%, 52%);
+            }
+
+            img.twitter {
+                @include styleWH(41%, 46%);
+            }
+
+            div {
+                @include Display(center, '', center);
+                @include styleWH(40px, 40px);
+
+                border: 1px solid $color1;
+                border-radius: 60px;
+
+                padding: 0.2em;
+
+                &:hover {
+                    cursor: pointer;
+
+                    border-color: $color2;
+
+                    img {
+                        background-color: $color2;
+                    }
+                }
+            }
+        }
+    }
+
+    .attribution { 
+        font-size: 20px; 
+        text-align: center;
+        
+        background-color: $backgroundFooter;
+
+        margin-bottom: -10em;
+
+        a { 
+            color: $color1; 
+        }
+    }
+}

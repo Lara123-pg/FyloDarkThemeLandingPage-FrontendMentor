@@ -1,0 +1,11 @@
+@mixin styleFont($fontSize: '', $fontWeight, $fontFamily: '') {
+    @if $fontSize != '' {
+        font-size: $fontSize;
+    }
+
+    font-weight: $fontWeight;
+
+    @if $fontFamily != '' {
+        font-family: 'Raleway', sans-serif;
+    }
+}
